@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jefri Nichol – Situs Penggemar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#top" class="logo">JN</a>
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#film">Film</a>
+    <a href="#sapa">Tulis Pesan</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1><span>Jefri</span><span>Nichol</span></h1>
+    <p class="hero-sub">Aktor Indonesia. Dikenal lewat peran di layar lebar sejak 2017.</p>
+    <a class="btn" href="#film">Lihat filmografi</a>
+  </section>
+
+  <section id="profil" class="profil">
+    <h2>Profil singkat</h2>
+    <div class="profil-grid">
+      <p>Jefri Nichol lahir di Jakarta pada 15 Februari 1999. Namanya melejit setelah membintangi film <em>Dear Nathan</em> dan sejak itu ia membawakan beragam peran, dari drama remaja hingga film biografi.</p>
+      <dl>
+        <div><dt>Lahir</dt><dd>15 Februari 1999</dd></div>
+        <div><dt>Kota</dt><dd>Jakarta</dd></div>
+        <div><dt>Profesi</dt><dd>Aktor</dd></div>
+        <div><dt>Debut film besar</dt><dd>Dear Nathan (2017)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="film" class="film">
+    <h2>Filmografi pilihan</h2>
+    <div class="filters" role="group" aria-label="Filter film">
+      <button class="chip active" data-filter="all">Semua</button>
+      <button class="chip" data-filter="drama">Drama remaja</button>
+      <button class="chip" data-filter="biografi">Biografi</button>
+    </div>
+    <ul class="films" id="films">
+      <li class="item" data-genre="drama">
+        <button class="row" aria-expanded="false">
+          <span class="year">2017</span><span class="title">Dear Nathan</span><span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="detail"><p>Film adaptasi novel yang mengangkat kisah remaja bernama Nathan. Peran ini membuat nama Jefri Nichol dikenal luas.</p></div>
+      </li>
+      <li class="item" data-genre="drama">
+        <button class="row" aria-expanded="false">
+          <span class="year">2018</span><span class="title">Dear Nathan: Hello Salma</span><span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="detail"><p>Kelanjutan kisah Nathan dan Salma.</p></div>
+      </li>
+      <li class="item" data-genre="biografi">
+        <button class="row" aria-expanded="false">
+          <span class="year">2019</span><span class="title">Habibie &amp; Ainun 3</span><span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="detail"><p>Film yang menceritakan masa muda B.J. Habibie dan Ainun.</p></div>
+      </li>
+      <li class="item" data-genre="drama">
+        <button class="row" aria-expanded="false">
+          <span class="year">2021</span><span class="title">Kisah Untuk Geri</span><span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="detail"><p>Drama romansa yang dibintangi bersama Anya Geraldine.</p></div>
+      </li>
+      <li class="item" data-genre="drama">
+        <button class="row" aria-expanded="false">
+          <span class="year">2022</span><span class="title">Dear Nathan: Thank You Salma</span><span class="plus" aria-hidden="true">+</span>
+        </button>
+        <div class="detail"><p>Bagian penutup dari seri Dear Nathan.</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="sapa" class="sapa">
+    <h2>Tulis pesan untuk Jefri</h2>
+    <form id="msgForm" novalidate>
+      <label>Nama <input type="text" id="nama" autocomplete="name"></label>
+      <label>Pesan <textarea id="pesan" rows="4" maxlength="200"></textarea></label>
+      <p class="counter"><span id="count">0</span>/200 karakter</p>
+      <button class="btn dark" type="submit">Kirim pesan</button>
+      <p id="status" role="status"></p>
+    </form>
+    <ul id="wall" class="wall"></ul>
+  </section>
+</main>
+
+<footer>Situs penggemar tidak resmi. Data dapat berubah, silakan periksa kembali.</footer>
+<script src="script.js"></script>
+</body>
+</html>
